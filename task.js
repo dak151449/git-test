@@ -1,13 +1,14 @@
 class Projectile1 {
-  constructor(verticalPosition){
-    this.x = canvas.width;
-    this.y = verticalPosition;
+  constructor(x, y, object){ //
+    this.x = x;
+    this.y = y;
     this.width = cellSize;
     this.height = cellSize;
     this.speed = CONSTANTA; //!!! Надо договориться о скорости
     this.movement = this.speed;
     this.health = true;
-    this.damage = CONSTANTA; //!!! Нада договориться про урон снаряда
+    this.damage = damage; //!!! Нада договориться про урон снаряда
+    this.radius = radius;
   }
   update() {
     this.x += this.movement; //!!! Надо договорить о формуле для изменения
